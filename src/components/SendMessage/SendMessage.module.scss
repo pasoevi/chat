@@ -1,0 +1,14 @@
+.sendMessage {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+
+    label {
+        width: 100%;
+    }
+    input {
+        width: 100%;
+        text-align: justify;
+        line-height: 3.3em;
+    }
+}
