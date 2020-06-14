@@ -16,13 +16,13 @@ function render(
         ...renderOptions
     } = {},
 ) {
-      //@ts-ignore
-      function Wrapper({ children }) {
-          return <Provider store={store}>{children}</Provider>;
-      }
-      //@ts-ignore
-      return rtlRender(element, { wrapper: Wrapper, ...renderOptions });
-  }
+    //@ts-ignore
+    function Wrapper({ children }) {
+        return <Provider store={store}>{children}</Provider>;
+    }
+    //@ts-ignore
+    return rtlRender(element, { wrapper: Wrapper, ...renderOptions });
+}
 
 // re-export everything
 export * from "@testing-library/react";

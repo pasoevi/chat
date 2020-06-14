@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { useSelector } from "react-redux";
 import { MessageComponent } from "../Message/Message";
 import { AppState } from "../../store";
+import styles from "./Chat.module.scss";
 
 export interface ChatProps {}
 
@@ -19,7 +20,7 @@ export const Chat: React.FC<ChatProps> = (props) => {
 
     const messages = useSelector((state: AppState) => state.chat.messages);
     return (
-        <div className="chat">
+        <div className={styles.chat}>
             {messages.map((message) => (
                 <div ref={lastMessageRef}>
                     <MessageComponent
