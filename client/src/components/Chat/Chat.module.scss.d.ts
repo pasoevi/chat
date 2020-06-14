@@ -1,5 +1,1 @@
-declare const styles: {
-  readonly "chat": string;
-};
-export = styles;
-
+export const chat: string;

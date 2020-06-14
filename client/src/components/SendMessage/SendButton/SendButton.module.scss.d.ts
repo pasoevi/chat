@@ -1,5 +1,1 @@
-declare const styles: {
-  readonly "sendButton": string;
-};
-export = styles;
-
+export const sendButton: string;
