@@ -1,7 +1,8 @@
 import React, { useState, ChangeEvent, FormEvent } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import styles from "./SendMessage.module.scss";
 import { sendMessage } from "../../store/chat/actions";
+import { AppState } from "../../store";
 
 interface SendMessageProps {
     message?: string;
@@ -14,6 +15,7 @@ const defaultProps: SendMessageProps = {
 export const SendMessage: React.FC<SendMessageProps> = (props) => {
     const dispatch = useDispatch();
     const { message } = props;
+    const userId = useSelector((state: AppState) => state.system.currentUser.id);
     const [messageText, setMessageText] = useState(message ?? "");
 
     function handleTextInputChange(e: ChangeEvent<HTMLInputElement>) {
@@ -21,7 +23,7 @@ export const SendMessage: React.FC<SendMessageProps> = (props) => {
     }
 
     function handleSendMessage(e: FormEvent<HTMLFormElement>) {
-        dispatch(sendMessage(messageText));
+        dispatch(sendMessage(messageText, userId));
         setMessageText("");
         e.preventDefault();
     }

@@ -1,14 +1,13 @@
 import { v4 } from "node-uuid";
 import { SEND_MESSAGE, DELETE_MESSAGE, RECEIVE_MESSAGE, Message } from "./types";
-import { CURRENT_USER_ID } from "../system/types";
 import { emit, CLIENT_MESSAGE_SEND } from "../../engine/websockets";
 
-export function sendMessage(text: string) {
+export function sendMessage(text: string, userId: string) {
     const newMessage = {
         text,
         id: v4(),
         timestamp: Date.now(),
-        sender: { id: CURRENT_USER_ID, displayName: "You" },
+        sender: { id: userId, displayName: "You" },
     };
     emit(CLIENT_MESSAGE_SEND, newMessage);
     return {

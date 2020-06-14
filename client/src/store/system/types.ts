@@ -1,5 +1,3 @@
-export const CURRENT_USER_ID = "0";
-
 export interface User {
     id: string;
     displayName: string;

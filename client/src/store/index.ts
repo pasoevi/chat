@@ -4,6 +4,7 @@ import {
     ThunkAction,
     Action,
 } from "@reduxjs/toolkit";
+import thunkMiddleware from "redux-thunk";
 import { loggerMiddleware } from "./middleware/loggerMiddleware";
 
 import { combineReducers } from "@reduxjs/toolkit";
@@ -11,12 +12,6 @@ import { combineReducers } from "@reduxjs/toolkit";
 import { systemReducer } from "./system/reducers";
 import { chatReducer } from "./chat/reducers";
 import { loadState, saveState } from "../localStorage/localStorage";
-import { Message } from "../components/Message/Message.stories";
-
-// Actions
-const defaultAction: Action = {
-    type: "default",
-};
 
 export const rootReducer = combineReducers({
     system: systemReducer,
@@ -36,7 +31,7 @@ const persistedState = loadState();
 
 export const store = configureStore({
     reducer: rootReducer,
-    middleware: [...getDefaultMiddleware(), loggerMiddleware],
+    middleware: [loggerMiddleware, thunkMiddleware, ...getDefaultMiddleware()],
     devTools: process.env.NODE_ENV !== "production",
     preloadedState: persistedState,
 });
