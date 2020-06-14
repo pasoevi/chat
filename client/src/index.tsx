@@ -12,10 +12,12 @@ initWS(store);
 
 const rootElement = document.getElementById("root");
 
-Sentry.init({
-    dsn:
-        "https://d964005f348340158006751922530bf6@o406571.ingest.sentry.io/5274291",
-});
+if (process.env.NODE_ENV === "production") {
+    Sentry.init({
+        dsn:
+            "https://d964005f348340158006751922530bf6@o406571.ingest.sentry.io/5274291",
+    });
+}
 
 ReactDOM.render(
     <Provider store={store}>

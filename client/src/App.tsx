@@ -5,10 +5,9 @@ import { SendMessage } from "./components/SendMessage/SendMessage";
 
 export default function App() {
     return (
-        <div className="App">
-            <div className={styles.top}>
-                <Chat />
-            </div>
+        <div className={styles.App}>
+            <Chat />
+            <div className={styles.hidden}></div>
             <div className={styles.bottom}>
                 <SendMessage />
             </div>

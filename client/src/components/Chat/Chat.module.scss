@@ -1,3 +1,5 @@
 .chat {
-
+    overflow: auto;
+    display: flex;
+    flex-direction: column-reverse;
 }
