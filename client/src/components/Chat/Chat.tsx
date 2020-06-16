@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { MessageComponent } from "../Message/Message";
 import { AppState } from "../../store";
 import * as styles from "./Chat.module.scss";
+import { SendMessage } from "../SendMessage/SendMessage";
 
 export interface ChatProps {}
 
@@ -32,6 +33,10 @@ export const Chat: React.FC<ChatProps> = (props) => {
                     />
                 </div>
             ))}
+            <div className={styles.hidden}></div>
+            <div className={styles.bottom}>
+                <SendMessage />
+            </div>
         </div>
     );
 };

@@ -13,8 +13,7 @@ var server = http_1.default.createServer(app);
 var io = require("socket.io").listen(server);
 var port = process.env.PORT || 5000;
 server.listen(port);
-console.log("OKs");
-// Register the index route of your app that returns the HTML file
+// Registerthe index route of your app that returns the HTML file
 app.get("/", function (req, res) {
     res.sendFile(path_1.default.join(__dirname, "client", "build", "index.html"));
 });

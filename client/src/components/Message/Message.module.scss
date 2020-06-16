@@ -1,34 +1,37 @@
 .message {
     position: relative;
-    background: #EBDE9A;
-	border-radius: 0px 20px 20px 20px;
+    background: #ebde9a;
+    border-radius: 0 20px 20px 20px;
     display: table;
     padding: 1.1em;
     margin: 1.8em 0.5em;
-    color: #615B5B;
+    color: #615b5b;
 
     &.sent {
         background-color: #fff;
-		margin-left: auto;
-		text-align: right;
+        border-radius: 20px 20px 0 20px;
+        margin-left: auto;
+        text-align: right;
     }
 }
 
 .messageInfo {
     display: flex;
-}
+    justify-content: space-between;
+    width: 7em;
 
-.author {
-    font-size: 1em;
-    line-height: 1em;
-    font-weight: bold;
+    .author {
+        font-size: 1em;
+        line-height: 1em;
+        font-weight: bold;
+    }
+
+    .sentDate {
+        font-size: 0.8em;
+        font-weight: 300;
+    }
 }
 
 .text {
     font-size: 1em;
-}
-
-.sentDate {
-    font-size: 0.8em;
-    font-weight: 300;
 }

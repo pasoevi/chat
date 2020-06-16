@@ -12,7 +12,6 @@ export const MessageComponent: React.FC<MessageProps> = React.memo(
         const userId = useSelector(
             (state: AppState) => state.system.currentUser.id,
         );
-        console.log(`userID: ${userId}, messageSenderId: ${sender.id}`);
         const classes = classNames(styles.message, {
             [styles.sent]: sender.id === userId,
         });
@@ -20,7 +19,7 @@ export const MessageComponent: React.FC<MessageProps> = React.memo(
             <div className={classes}>
                 <div className={styles.messageInfo}>
                     {id !== userId && (
-                        <div className={styles.author}>Fortinbras</div>
+                        <div className={classNames(styles.author, "truncate")}>Fortinbras</div>
                     )}
                     <div className={styles.sentDate}>10:35</div>
                 </div>

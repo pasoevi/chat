@@ -4,6 +4,9 @@ import { UPDATE_SESSION, SystemState, SystemActionTypes } from "./types";
 const initialState: SystemState = {
     loggedIn: false,
     session: "",
+    timeFormat: "12",
+    sendOnCtrlEnter: true,
+    theme: "Light",
     currentUser: {
         id: v4(),
         displayName: "You",
