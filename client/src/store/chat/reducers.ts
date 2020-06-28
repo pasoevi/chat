@@ -11,22 +11,22 @@ import { v4 } from "node-uuid";
 const mockMessages: Message[] = [
     {
         id: "1",
-        sender: {id: v4(), displayName: "Sergo Pasoevi"},
+        sender: { id: v4(), displayName: "Sergo Pasoevi" },
         timestamp: Date.now(),
         text: "Do you want to bang tonight?",
-    }/* ,
+    },
     {
         id: "2",
-        author: "Sergo Pasoevi",
+        sender: { id: v4(), displayName: "Sergo Pasoevi" },
         timestamp: Date.now(),
         text: "Do you want to bang tonight?",
     },
     {
         id: "3",
-        author: "You",
+        sender: { id: v4(), displayName: "Sergo Pasoevi" },
         timestamp: Date.now(),
         text: "Do you want to bang tonight?",
-    } */,
+    },
 ];
 
 const initialState: ChatState = {
