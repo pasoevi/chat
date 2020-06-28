@@ -1,3 +1,68 @@
+// Variables (remove once globally accessible)
+$grey-lightest: #f9f9f9;
+$grey-light: #f2f2f2;
+$grey-middle: #e1e1e1;
+$grey-dark: #615b5b;
+$grey-darker: #4b4646;
+$black-grey: #302c2c;
+$yellow-light: #fff2ad;
+$yellow-middle: #ffe769;
+$yellow-dark: #ebde9a;
+
 .settings {
-    background-color: #dfdfdf;
+  position: absolute;
+  height: 100vh;
+  width: 70%;
+  right: 0;
+  top: 0;
+  background-color: white;
+  border: 1px solid $grey-light;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  > div {
+    padding: 15px 0;
+    font-weight: 400;
+  }
+
+  // headline and close icon
+  > div:first-of-type {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding-right: 15px;
+  }
+
+  // close icon
+  > div:first-of-type a {
+    text-decoration: none;
+    font-size: 3rem;
+    font-weight: 200;
+    margin-top: -15px;
+    color: $grey-dark;
+  }
+}
+
+h2 {
+  text-align: center;
+  color: $grey-dark;
+  margin-top: 5px;
+  font-size: 1.2rem;
+}
+
+label {
+  color: $black-grey;
+  font-weight: 300;
+}
+
+input[type="text"] {
+  display: block;
+  border-radius: 0;
+  border: 1px solid $grey-middle;
+  box-shadow: none;
+  padding: 5px 10px;
+  margin-top: 10px;
+}
+
+input[type="radio"] {
+  margin-right: 10px;
 }

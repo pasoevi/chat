@@ -1,22 +1,44 @@
 /* All global styles go into this file or files imported herein */
 
 body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-        "Helvetica Neue", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
 code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-        monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
 /* You can only apply this class to elements that have width or max-width  */
 .truncate {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
+
+// Variables
+$grey-lightest: #f9f9f9;
+$grey-light: #f2f2f2;
+$grey-middle: #e1e1e1;
+$grey-dark: #615b5b;
+$grey-darker: #4b4646;
+$black-grey: #302c2c;
+$yellow-light: #fff2ad;
+$yellow-middle: #ffe769;
+$yellow-dark: #ebde9a;
+
+// light theme
+$chat-bg-clr: $grey-lightest;
+$text-clr: $black-grey;
+
+// dark theme
+/*
+$chat-bg-clr: $black-grey;
+$text-clr: white;
+*/
