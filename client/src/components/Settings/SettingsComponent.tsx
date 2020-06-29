@@ -33,9 +33,11 @@ export const SettingsComponent: React.FC<SettingsComponentProps> = (props) => {
   };
   return (
     <div className={styles.settings}>
-      <div>
+      <div className={styles.header}>
         <h2>Settings</h2>
-        <Link to="/">×</Link>
+        <Link to="/" className={styles.close}>
+          ×
+        </Link>
       </div>
       <div>
         <label>
@@ -43,8 +45,8 @@ export const SettingsComponent: React.FC<SettingsComponentProps> = (props) => {
           <input type="text" />
         </label>
       </div>
-      <div className="settingspart">
-        <span>Theme</span>
+      <div className={styles.settingspart}>
+        <span className={styles.title}>Theme</span>
         <div>
           <label>
             <input
@@ -57,7 +59,7 @@ export const SettingsComponent: React.FC<SettingsComponentProps> = (props) => {
             Light
           </label>
         </div>
-        <div className="settingspart">
+        <div>
           <label>
             <input
               type="radio"
@@ -70,8 +72,8 @@ export const SettingsComponent: React.FC<SettingsComponentProps> = (props) => {
           </label>
         </div>
       </div>
-      <div className="settingspart">
-        <span>Time format</span>
+      <div className={styles.settingspart}>
+        <span className={styles.title}>Time format</span>
         <div>
           <label>
             <input
@@ -97,8 +99,8 @@ export const SettingsComponent: React.FC<SettingsComponentProps> = (props) => {
           </label>
         </div>
       </div>
-      <div className="settingspart">
-        <span>Send messages on CTRL+ENTER</span>
+      <div className={styles.settingspart}>
+        <span className={styles.title}>Send messages on CTRL+ENTER</span>
         <div>
           <label>
             <input
