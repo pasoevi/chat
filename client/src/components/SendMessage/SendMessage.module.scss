@@ -1,19 +1,21 @@
-.sendMessage {
-  display: flex;
-  justify-content: space-between;
-  height: 100%;
-  background-color: white;
-  padding: 1em;
-  border-top: 1px solid #f2f2f2;
+@import "../../index.scss";
 
-  label {
-    width: 100%;
-  }
-  input {
-    width: 100%;
-    text-align: justify;
-    line-height: 3.3em;
-    background-color: #f9f9f9;
-    border: none;
-  }
+.sendMessage {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    background-color: $yellow-middle;
+    padding: 1em;
+    border-top: 1px solid #f2f2f2;
+
+    label {
+        width: 100%;
+    }
+    input {
+        width: 100%;
+        text-align: justify;
+        line-height: 3.3em;
+        background-color: $grey-lightest;
+        border: none;
+    }
 }
