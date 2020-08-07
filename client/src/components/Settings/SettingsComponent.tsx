@@ -1,6 +1,6 @@
 import React, { ChangeEvent } from "react";
 import * as styles from "./SettingsComponent.module.scss";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { AppState } from "../../store";
 import { Link } from "react-router-dom";
 
@@ -9,6 +9,7 @@ export interface SettingsComponentProps {
 }
 
 export const SettingsComponent: React.FC<SettingsComponentProps> = (props) => {
+    const dispatch = useDispatch();
     const theme = useSelector((state: AppState) => state.system.theme);
 
     if (
@@ -36,6 +37,7 @@ export const SettingsComponent: React.FC<SettingsComponentProps> = (props) => {
     );
     const onValueChange = (e: ChangeEvent<HTMLElement>) => {
         console.log(e.target);
+
     };
     return (
         <div className={styles.settings}>
