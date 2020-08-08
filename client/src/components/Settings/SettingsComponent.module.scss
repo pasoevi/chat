@@ -16,9 +16,10 @@ $yellow-dark: #ebde9a;
   right: 0;
   top: 0;
   background-color: white;
-  border: 1px solid $grey-light;
+  border-left: 1px solid $grey-light;
   padding: 15px 20px;
   box-sizing: border-box;
+  z-index: 1;
 }
 
 .header {
@@ -69,4 +70,13 @@ input[type="text"] {
 
 input[type="radio"] {
   margin: 0 10px 0 0;
+}
+
+.header button {
+  background: transparent;
+  border: none;
+  font-size: 3rem;
+  font-weight: 300;
+  font-family: "Roboto";
+  color: $black-grey;
 }
