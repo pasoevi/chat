@@ -11,29 +11,25 @@ export default function App() {
 
     const handleSettingsToggle = () => {
         setMenuVisible(!isMenuVisible);
+        console.log(isMenuVisible);
     };
 
-    console.log(isMenuVisible);
+    const SettingsOverlay = (
+        <div className={styles["settingsOverlay"]}>
+            <SettingsComponent onClose={handleSettingsToggle} />
+        </div>
+    );
 
     return (
         <div className={styles.app}>
             <Router>
                 <div>
-                    <Menu toggleSettings={handleSettingsToggle} />
-
-                    {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
-                    {/* <Switch>
-                        <Route path="/settings">
-                            <SettingsComponent />
-                        </Route>
-                        <Route path="/">
-                            <Chat />
-                        </Route>
-                    </Switch> */}
+                    <div className={styles.menu}>
+                        <Menu toggleSettings={handleSettingsToggle} />
+                    </div>
                     <div className="container">
-                        {isMenuVisible && <SettingsComponent onClose={handleSettingsToggle} />}
                         <Chat />
+                        {isMenuVisible && SettingsOverlay}
                     </div>
                 </div>
             </Router>
