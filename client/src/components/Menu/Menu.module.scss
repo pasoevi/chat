@@ -1,8 +1,12 @@
+@import "../../index.scss";
+
 .menu {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: flex-end;
 }
 
-ul {
-  list-style-type: none;
+.toggleSettings {
+    border: none;
+    background: none;
+    padding: 0.3em 0.8em;
 }

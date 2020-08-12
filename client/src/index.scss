@@ -42,3 +42,12 @@ $text-clr: $black-grey;
 $chat-bg-clr: $black-grey;
 $text-clr: white;
 */
+
+/* Accessibility */
+
+.srOnly { // for screen readers
+    height: 1px;
+    overflow: hidden;
+    position: relative;
+    width: 1px;
+}

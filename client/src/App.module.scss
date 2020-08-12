@@ -9,13 +9,13 @@
     position: fixed;
     top: 0;
     width: 100%;
-    height: 5em;
+    height: 2em;
     background-color: $grey-lightest;
 }
 
 .container {
-    margin-top: 5em;
     position: relative;
+    padding-top: 2em;
 }
 
 .settingsOverlay {

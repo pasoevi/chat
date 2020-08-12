@@ -22,17 +22,16 @@ export default function App() {
 
     return (
         <div className={styles.app}>
-            <Router>
-                <div>
-                    <div className={styles.menu}>
-                        <Menu toggleSettings={handleSettingsToggle} />
-                    </div>
-                    <div className={styles.container}>
-                        <Chat />
-                        {isMenuVisible && SettingsOverlay}
-                    </div>
+            <div className={styles.container}>
+                <div className={styles.menu}>
+                    <Menu toggleSettings={handleSettingsToggle} />
                 </div>
-            </Router>
+                {/* <div className={styles.chat}> */}
+                <Chat />
+                {/* </div> */}
+
+                {isMenuVisible && SettingsOverlay}
+            </div>
         </div>
     );
 }
