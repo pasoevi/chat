@@ -27,7 +27,7 @@ export default function App() {
                     <div className={styles.menu}>
                         <Menu toggleSettings={handleSettingsToggle} />
                     </div>
-                    <div className="container">
+                    <div className={styles.container}>
                         <Chat />
                         {isMenuVisible && SettingsOverlay}
                     </div>
