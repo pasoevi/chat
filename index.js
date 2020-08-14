@@ -28,4 +28,8 @@ io.on("connection", function (socket) {
         console.log(data);
         socket.broadcast.emit("SERVER_MESSAGE_BROADCAST", data);
     });
+
+    socket.on("CLIENT_USERNAME_UPDATE", function (data) {
+        console.log(data);
+    });
 });
