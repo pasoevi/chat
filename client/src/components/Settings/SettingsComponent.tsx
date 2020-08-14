@@ -2,7 +2,12 @@ import React, { ChangeEvent } from "react";
 import * as styles from "./SettingsComponent.module.scss";
 import { useSelector, useDispatch } from "react-redux";
 import { AppState } from "../../store";
-import { Link } from "react-router-dom";
+import {
+    updateUsername,
+    updateTimeformat,
+    updateTheme,
+    updateCTRLSends,
+} from "../../store/system/actions";
 
 export interface SettingsComponentProps {
     onClose: () => void;
@@ -10,6 +15,9 @@ export interface SettingsComponentProps {
 
 export const SettingsComponent: React.FC<SettingsComponentProps> = (props) => {
     const dispatch = useDispatch();
+    const username = useSelector(
+        (state: AppState) => state.system.currentUser.displayName,
+    );
     const theme = useSelector((state: AppState) => state.system.theme);
 
     if (
@@ -36,7 +44,24 @@ export const SettingsComponent: React.FC<SettingsComponentProps> = (props) => {
         (state: AppState) => state.system.sendOnCtrlEnter,
     );
     const onValueChange = (e: ChangeEvent<HTMLElement>) => {
-        console.log(e.target);
+        const { name, value } = e.target;
+        switch (name) {
+            case "username":
+                dispatch(updateUsername(value));
+                break;
+            case "timeFormat":
+                dispatch(updateTimeformat(value));
+                break;
+            case "theme":
+                dispatch(updateTheme(value));
+                break;
+            case "sendOnCtrlEnter":
+                dispatch(updateCTRLSends(value === "true"));
+                break;
+            default:
+                break;
+        }
+        console.log(`${name}: ${value}`);
     };
     return (
         <div className={styles.settings}>
@@ -47,7 +72,12 @@ export const SettingsComponent: React.FC<SettingsComponentProps> = (props) => {
             <div>
                 <label>
                     <span>User name</span>
-                    <input type="text" />
+                    <input
+                        value={username}
+                        name="username"
+                        onChange={onValueChange}
+                        type="text"
+                    />
                 </label>
             </div>
             <div className={styles.settingspart}>
@@ -112,8 +142,8 @@ export const SettingsComponent: React.FC<SettingsComponentProps> = (props) => {
                     <label>
                         <input
                             type="radio"
-                            value="Light"
-                            name="theme"
+                            value="true"
+                            name="sendOnCtrlEnter"
                             checked={sendOnCtrlEnter === true}
                             onChange={onValueChange}
                         />
@@ -124,7 +154,7 @@ export const SettingsComponent: React.FC<SettingsComponentProps> = (props) => {
                     <label>
                         <input
                             type="radio"
-                            value="Dark"
+                            value="false"
                             name="sendOnCtrlEnter"
                             checked={sendOnCtrlEnter === false}
                             onChange={onValueChange}

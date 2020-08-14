@@ -1,7 +1,6 @@
 import React from "react";
 import * as styles from "./App.module.scss";
-import { Chat } from "./components/Chat/Chat";
-import { BrowserRouter as Router } from "react-router-dom";
+import { ChatComponent } from "./components/Chat/ChatComponent";
 import { SettingsComponent } from "./components/Settings/SettingsComponent";
 import { Menu } from "./components/Menu/Menu";
 import { useState } from "react";
@@ -27,7 +26,7 @@ export default function App() {
                     <Menu toggleSettings={handleSettingsToggle} />
                 </div>
                 {/* <div className={styles.chat}> */}
-                <Chat />
+                <ChatComponent />
                 {/* </div> */}
 
                 {isMenuVisible && SettingsOverlay}

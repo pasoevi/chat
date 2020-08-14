@@ -7,7 +7,7 @@ import { SendMessage } from "../SendMessage/SendMessage";
 
 export interface ChatProps {}
 
-export const Chat: React.FC<ChatProps> = (props) => {
+export const ChatComponent: React.FC<ChatProps> = (props) => {
     const lastMessageRef = useRef<HTMLDivElement>(null);
 
     const scrollToBottom = () => {
