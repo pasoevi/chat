@@ -52,7 +52,7 @@
     "tscss": "yarn tsm src/",
     "watch-css": "nodemon --exec yarn tscss",
     "build-css": "yarn tscss",
-    "build": "run-s test build-css yarn build-js",
+    "build": "run-s test build-css build-js",
     "start": "run-p watch-js watch-css",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
