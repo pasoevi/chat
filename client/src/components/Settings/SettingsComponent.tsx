@@ -1,4 +1,4 @@
-import React, { ChangeEvent } from "react";
+import React from "react";
 import * as styles from "./SettingsComponent.module.scss";
 import { useSelector, useDispatch } from "react-redux";
 import { AppState } from "../../store";
@@ -8,6 +8,7 @@ import {
     updateTheme,
     updateCTRLSends,
 } from "../../store/system/actions";
+import { TimeFormat, Theme } from "../../store/system/types";
 
 export interface SettingsComponentProps {
     onClose: () => void;
@@ -43,17 +44,20 @@ export const SettingsComponent: React.FC<SettingsComponentProps> = (props) => {
     const sendOnCtrlEnter = useSelector(
         (state: AppState) => state.system.sendOnCtrlEnter,
     );
-    const onValueChange = (e: ChangeEvent<HTMLElement>) => {
-        const { name, value } = e.target;
+    const onValueChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const target = e.currentTarget;
+        const { name, value } = target;
         switch (name) {
             case "username":
                 dispatch(updateUsername(value));
                 break;
             case "timeFormat":
-                dispatch(updateTimeformat(value));
+                const newTimeFormat: TimeFormat = value === "24" ? "24" : "12";
+                dispatch(updateTimeformat(newTimeFormat));
                 break;
             case "theme":
-                dispatch(updateTheme(value));
+                const newTheme: Theme = value === "Dark" ? "Dark" : "Light";
+                dispatch(updateTheme(newTheme));
                 break;
             case "sendOnCtrlEnter":
                 dispatch(updateCTRLSends(value === "true"));
