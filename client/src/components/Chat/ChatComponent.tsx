@@ -23,13 +23,12 @@ export const ChatComponent: React.FC<ChatProps> = (props) => {
     return (
         <div className={styles.chat}>
             {messages.map((message) => (
-                <div ref={lastMessageRef}>
+                <div ref={lastMessageRef} key={message.id}>
                     <MessageComponent
                         text={message.text}
                         sender={message.sender}
                         timestamp={message.timestamp}
                         id={message.id}
-                        key={message.id}
                     />
                 </div>
             ))}

@@ -14,19 +14,7 @@ const mockMessages: Message[] = [
         sender: { id: v4(), displayName: "Sergo Pasoevi" },
         timestamp: Date.now(),
         text: "Do you want to bang tonight?",
-    },
-    {
-        id: "2",
-        sender: { id: v4(), displayName: "Sergo Pasoevi" },
-        timestamp: Date.now(),
-        text: "Do you want to bang tonight?",
-    },
-    {
-        id: "3",
-        sender: { id: v4(), displayName: "Sergo Pasoevi" },
-        timestamp: Date.now(),
-        text: "Do you want to bang tonight?",
-    },
+    }
 ];
 
 const initialState: ChatState = {
