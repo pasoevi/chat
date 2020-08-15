@@ -1,14 +1,17 @@
+@import "../../index.scss";
+
 .message {
     position: relative;
-    background: #ebde9a;
+    background: $yellow-dark;
     border-radius: 0 20px 20px 20px;
     display: table;
     padding: 1.1em;
     margin: 1.8em 0.5em;
-    color: #615b5b;
+    color: $grey-dark;
 
     &.sent {
-        background-color: #fff;
+        background-color: white;
+				border: 1px solid $grey-lightest;
         border-radius: 20px 20px 0 20px;
         margin-left: auto;
         text-align: right;

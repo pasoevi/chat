@@ -1,6 +1,8 @@
+@import "../../index.scss";
+
 .chat {
   overflow: auto;
-  background-color: #f9f9f9;
+  background-color: $grey-lightest;
 }
 
 .hidden {
