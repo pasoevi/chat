@@ -6,12 +6,12 @@
     border-radius: 0 20px 20px 20px;
     display: table;
     padding: 1.1em;
-    margin: 1.8em 0.5em;
+    margin: 0.8em 0.5em;
     color: $grey-dark;
 
     &.sent {
         background-color: white;
-				border: 1px solid $grey-lightest;
+				border: 1px solid $grey-light;
         border-radius: 20px 20px 0 20px;
         margin-left: auto;
         text-align: right;
