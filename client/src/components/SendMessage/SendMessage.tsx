@@ -15,7 +15,7 @@ const defaultProps: SendMessageProps = {
 export const SendMessage: React.FC<SendMessageProps> = (props) => {
     const dispatch = useDispatch();
     const { message } = props;
-    const userId = useSelector((state: AppState) => state.system.currentUser.id);
+    const user = useSelector((state: AppState) => state.system.currentUser);
     const [messageText, setMessageText] = useState(message ?? "");
 
     function handleTextInputChange(e: ChangeEvent<HTMLInputElement>) {
@@ -23,7 +23,7 @@ export const SendMessage: React.FC<SendMessageProps> = (props) => {
     }
 
     function handleSendMessage(e: FormEvent<HTMLFormElement>) {
-        dispatch(sendMessage(messageText, userId));
+        dispatch(sendMessage(messageText, user));
         setMessageText("");
         e.preventDefault();
     }

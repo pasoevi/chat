@@ -19,7 +19,7 @@ export const MessageComponent: React.FC<MessageProps> = React.memo(
             <div className={classes}>
                 <div className={styles.messageInfo}>
                     {id !== userId && (
-                        <div className={classNames(styles.author, "truncate")}>Fortinbras</div>
+                        <div className={classNames(styles.author, "truncate")}>{sender.displayName}</div>
                     )}
                     <div className={styles.sentDate}>10:35</div>
                 </div>
