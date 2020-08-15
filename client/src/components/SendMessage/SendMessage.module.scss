@@ -4,7 +4,7 @@
     display: flex;
     justify-content: space-between;
     height: 100%;
-    background-color: $grey-lightest;
+    background-color: white;
     padding: 1em;
     border-top: 1px solid #f2f2f2;
 
@@ -18,4 +18,13 @@
         background-color: $grey-lightest;
         border: none;
     }
+		button {
+			border: none;
+			background: $grey-lightest;
+			height: 3.3em;
+			padding: 10px 15px 10px 0;
+		}
+		button img {
+			width: 25px;
+		}
 }

@@ -14,7 +14,7 @@ export const Menu: React.FC<MenuProps> = (props) => {
                 className={styles.toggleSettings}
                 onClick={props.toggleSettings}
             >
-                <img src={gearIcon} alt="Open Setings" />
+                <img src={gearIcon} alt="Open Settings" />
             </button>
             {/* <div className={styles.srOnly}></div> */}
         </nav>

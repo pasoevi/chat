@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import styles from "./SendMessage.module.scss";
 import { sendMessage } from "../../store/chat/actions";
 import { AppState } from "../../store";
+import planeIcon from "../../assets/plane.svg";
 
 interface SendMessageProps {
     message?: string;
@@ -38,7 +39,7 @@ export const SendMessage: React.FC<SendMessageProps> = (props) => {
                 />
             </label>
             <button type="submit" value="Send">
-                Send
+                <img src={planeIcon} alt="Send" />
             </button>
         </form>
     );
