@@ -16,7 +16,7 @@ export const ChatComponent: React.FC<ChatProps> = (props) => {
         }
     };
     useEffect(() => {
-        // scrollToBottom();
+        scrollToBottom();
     });
 
     const messages = useSelector((state: AppState) => state.chat.messages);

@@ -21,7 +21,7 @@ export const MessageComponent: React.FC<MessageProps> = React.memo(
                     {id !== userId && (
                         <div className={classNames(styles.author, "truncate")}>{sender.displayName}</div>
                     )}
-                    <div className={styles.sentDate}>10:35</div>
+                    <div className={styles.sentDate}>{new Date(timestamp).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</div>
                 </div>
                 <div className={styles.text}>{text}</div>
             </div>
