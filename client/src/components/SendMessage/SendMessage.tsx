@@ -24,9 +24,11 @@ export const SendMessage: React.FC<SendMessageProps> = (props) => {
     }
 
     function handleSendMessage(e: FormEvent<HTMLFormElement>) {
-        dispatch(sendMessage(messageText, user));
-        setMessageText("");
-        e.preventDefault();
+			if (messageText) {
+			    dispatch(sendMessage(messageText, user));
+			    setMessageText("");
+			}
+		  e.preventDefault();
     }
 
     return (
