@@ -1,5 +1,5 @@
 {
-     "env": {
+    "env": {
         "browser": true,
         "es6": true,
         "node": true
@@ -17,22 +17,11 @@
         "ecmaVersion": 2018,
         "sourceType": "module"
     },
-    "plugins": [
-        "react",
-        "@typescript-eslint"
-    ],
+    "plugins": ["react", "@typescript-eslint"],
     "rules": {
-        "indent": [
-            "error",
-            4
-        ],
-        "quotes": [
-            "error",
-            "double"
-        ],
-        "semi": [
-            "error",
-            "always"
-        ]
+        "indent": ["error", 4],
+        "quotes": ["error", "double"],
+        "semi": ["error", "always"],
+        "no-tabs": ["error", { "allowIndentationTabs": false }]
     }
 }

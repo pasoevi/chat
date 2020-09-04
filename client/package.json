@@ -48,6 +48,7 @@
     "typescript": "^3.9.7"
   },
   "scripts": {
+    "setup": "./scripts/setup.sh",
     "watch-js": "react-scripts start",
     "build-js": "react-scripts build",
     "tscss": "yarn tsm src/",
