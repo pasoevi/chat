@@ -3,9 +3,9 @@ export interface User {
   displayName: string;
 }
 
-export type Theme = "Light" | "Dark";
-export type TimeFormat = "12" | "24";
-export type Language = "EN" | "RU" | "DE";
+export type Theme = 'Light' | 'Dark';
+export type TimeFormat = '12' | '24';
+export type Language = 'EN' | 'RU' | 'DE';
 
 // Describing the shape of the system's slice of state
 export interface SystemState {
@@ -19,12 +19,12 @@ export interface SystemState {
 }
 
 // Describing the different ACTION NAMES available
-export const UPDATE_SESSION = "UPDATE_SESSION";
-export const UPDATE_USERNAME = "UPDATE_USERNAME";
-export const UPDATE_THEME = "UPDATE_THEME";
-export const UPDATE_TIME_FORMAT = "UPDATE_TIME_FORMAT";
-export const UPDATE_CTRL_SENDS = "UPDATE_CTRL_SENDS";
-export const UPDATE_LANGUAGE = "UPDATE_LANGUAGE";
+export const UPDATE_SESSION = 'UPDATE_SESSION';
+export const UPDATE_USERNAME = 'UPDATE_USERNAME';
+export const UPDATE_THEME = 'UPDATE_THEME';
+export const UPDATE_TIME_FORMAT = 'UPDATE_TIME_FORMAT';
+export const UPDATE_CTRL_SENDS = 'UPDATE_CTRL_SENDS';
+export const UPDATE_LANGUAGE = 'UPDATE_LANGUAGE';
 
 interface UpdateSessionAction {
   type: typeof UPDATE_SESSION;

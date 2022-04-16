@@ -1,10 +1,8 @@
-import React from "react";
-import styles from "./SendButton.module.scss";
+import React from 'react';
+import styles from './SendButton.module.scss';
 
 export interface SendButtonProps {
   onClick: () => void;
 }
 
-export const SendButton: React.FC<SendButtonProps> = React.memo((props) => {
-    return <button className={styles.sendButton} onClick={props.onClick}/>;
-});
+export const SendButton: React.FC<SendButtonProps> = React.memo((props) => <button className={styles.sendButton} onClick={props.onClick} />);

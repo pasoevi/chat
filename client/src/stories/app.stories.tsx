@@ -1,32 +1,31 @@
-import React from "react";
-//@ts-ignore
-import { WithFigma } from "storybook-addon-figma";
-import App from "../App";
+import React from 'react';
+// @ts-ignore
+import { WithFigma } from 'storybook-addon-figma';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import App from '../App';
 
-import { Provider } from "react-redux";
-import { rootReducer as reducer } from "../store";
-import { createStore } from "redux";
+import { rootReducer as reducer } from '../store';
 
 const initialRootState = {};
 
 const store = createStore(reducer, initialRootState);
 
-
 export default {
-    title: "Chat",
-    component: App,
+  title: 'Chat',
+  component: App,
 };
 
-export const Chat = () => (
+export function Chat() {
+  return (
     <WithFigma
-        url={
-            "https://www.figma.com/file/GSKRTwhXLBqUekKzbW5YmJ/chat-app?node-id=2%3A4"
-        }
+      url="https://www.figma.com/file/GSKRTwhXLBqUekKzbW5YmJ/chat-app?node-id=2%3A4"
     >
-        <Provider store={store}>
-            <React.StrictMode>
-                <App/>
-            </React.StrictMode>
-        </Provider>
+      <Provider store={store}>
+        <React.StrictMode>
+          <App />
+        </React.StrictMode>
+      </Provider>
     </WithFigma>
-);
+  );
+}

@@ -1,4 +1,4 @@
-import { User } from "../system/types";
+import { User } from '../system/types';
 
 export interface Message {
   id: string;
@@ -12,9 +12,9 @@ export interface ChatState {
 }
 
 // Describing the different ACTION NAMES available
-export const SEND_MESSAGE = "SEND_MESSAGE";
-export const RECEIVE_MESSAGE = "RECEIVE_MESSAGE";
-export const DELETE_MESSAGE = "DELETE_MESSAGE";
+export const SEND_MESSAGE = 'SEND_MESSAGE';
+export const RECEIVE_MESSAGE = 'RECEIVE_MESSAGE';
+export const DELETE_MESSAGE = 'DELETE_MESSAGE';
 
 interface SendMessageAction {
   type: typeof SEND_MESSAGE;

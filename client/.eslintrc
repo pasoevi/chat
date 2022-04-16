@@ -5,6 +5,7 @@
         "node": true
     },
     "extends": [
+        "airbnb",
         "airbnb-typescript",
         "eslint:recommended",
         "plugin:react/recommended",
@@ -21,9 +22,6 @@
     },
     "plugins": ["react", "@typescript-eslint"],
     "rules": {
-        "indent": ["error", 4],
-        "quotes": ["error", "double"],
-        "semi": ["error", "always"],
         "no-tabs": ["error", { "allowIndentationTabs": false }]
     }
 }
