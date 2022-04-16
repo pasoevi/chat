@@ -6,13 +6,7 @@ import { SEND_MESSAGE } from '../chat/types';
 export const serverMiddleware: temporaryAny = (
   api: MiddlewareAPI<temporaryAny>,
 ) => (next: Dispatch<temporaryAny>) => <A extends Action>(action: A) => {
-  console.log({
-    sendingAction: action,
-  });
   if (action.type === SEND_MESSAGE) {
-    console.log({
-      sendingMessage: action,
-    });
     // @ts-ignore
     emit(CLIENT_MESSAGE_SEND, action.payload);
   }
