@@ -1,10 +1,10 @@
-import {Action, combineReducers, configureStore, getDefaultMiddleware, ThunkAction,} from "@reduxjs/toolkit";
+import { Action, combineReducers, configureStore, getDefaultMiddleware, ThunkAction } from "@reduxjs/toolkit";
 import thunkMiddleware from "redux-thunk";
-import {loggerMiddleware} from "./middleware/loggerMiddleware";
+import { loggerMiddleware } from "./middleware/loggerMiddleware";
 
-import {systemReducer} from "./system/reducers";
-import {chatReducer} from "./chat/reducers";
-import {loadState, saveState} from "../localStorage/localStorage";
+import { systemReducer } from "./system/reducers";
+import { chatReducer } from "./chat/reducers";
+import { loadState, saveState } from "../localStorage/localStorage";
 
 export const rootReducer = combineReducers({
     system: systemReducer,
@@ -14,9 +14,9 @@ export const rootReducer = combineReducers({
 export type AppState = ReturnType<typeof store.getState>;
 
 export type AppThunk<ReturnType = void> = ThunkAction<ReturnType,
-    AppState,
-    unknown,
-    Action<string>>;
+AppState,
+unknown,
+Action<string>>;
 
 const persistedState = loadState();
 

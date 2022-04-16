@@ -1,14 +1,14 @@
 import React from "react";
 import classNames from "classnames";
 import styles from "./Message.module.scss";
-import {Message} from "../../store/chat/types";
-import {useSelector} from "react-redux";
-import {AppState} from "../../store";
+import { Message } from "../../store/chat/types";
+import { useSelector } from "react-redux";
+import { AppState } from "../../store";
 
 export interface MessageProps extends Message {
 }
 
-export const MessageComponent: React.FC<MessageProps> = ({text, sender, id, timestamp}) => {
+export const MessageComponent: React.FC<MessageProps> = ({ text, sender, id, timestamp }) => {
     const userId = useSelector(
         (state: AppState) => state.system.currentUser.id,
     );

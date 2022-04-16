@@ -1,5 +1,5 @@
 import React from "react";
-import {render} from "./test-utils";
+import { render } from "./test-utils";
 import App from "./App";
 
 test("renders learn react link", () => {
@@ -8,9 +8,9 @@ test("renders learn react link", () => {
             <App />
         </Provider>,
     ); */
-    const {getByText} = render(
-        <App/>
-    );
+    const { getByText } = render(
+        <App/>,
+  );
     const linkElement = getByText(/send/i);
     expect(linkElement).toBeInTheDocument();
 });

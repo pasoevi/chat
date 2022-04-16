@@ -1,11 +1,11 @@
 import React from "react";
 import * as ReactDOM from "react-dom/client";
 import * as Sentry from "@sentry/browser";
-import {Provider} from "react-redux";
+import { Provider } from "react-redux";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import {store} from "./store";
-import {init as initWS} from "./engine/websockets";
+import { store } from "./store";
+import { init as initWS } from "./engine/websockets";
 import "./index.scss";
 
 initWS(store);
@@ -26,7 +26,7 @@ root.render(
         <React.StrictMode>
             <App/>
         </React.StrictMode>
-    </Provider>
+    </Provider>,
 );
 
 // If you want your app to work offline and load faster, you can change

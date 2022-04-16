@@ -1,7 +1,7 @@
-import {v4} from "uuid";
-import {DELETE_MESSAGE, Message, RECEIVE_MESSAGE, SEND_MESSAGE} from "./types";
-import {CLIENT_MESSAGE_SEND, emit} from "../../engine/websockets";
-import {User} from "../system/types";
+import { v4 } from "uuid";
+import { DELETE_MESSAGE, Message, RECEIVE_MESSAGE, SEND_MESSAGE } from "./types";
+import { CLIENT_MESSAGE_SEND, emit } from "../../engine/websockets";
+import { User } from "../system/types";
 
 export function sendMessage(text: string, sender: User) {
     const newMessage = {
@@ -19,7 +19,7 @@ export function sendMessage(text: string, sender: User) {
 
 // Action Creators
 export function messageReceived(message: Message) {
-    return {type: RECEIVE_MESSAGE, payload: message};
+    return { type: RECEIVE_MESSAGE, payload: message };
 }
 
 // side effects, only as applicable

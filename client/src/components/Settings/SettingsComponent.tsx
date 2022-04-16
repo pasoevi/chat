@@ -1,11 +1,11 @@
 import React from "react";
 import styles from "./SettingsComponent.module.scss";
-import {useDispatch, useSelector} from "react-redux";
-import {AppState} from "../../store";
-import {updateCTRLSends, updateTheme, updateTimeformat, updateUsername,} from "../../store/system/actions";
+import { useDispatch, useSelector } from "react-redux";
+import { AppState } from "../../store";
+import { updateCTRLSends, updateTheme, updateTimeformat, updateUsername } from "../../store/system/actions";
 
 export interface SettingsComponentProps {
-    onClose: () => void;
+  onClose: () => void;
 }
 
 export const SettingsComponent: React.FC<SettingsComponentProps> = (props) => {
@@ -19,7 +19,7 @@ export const SettingsComponent: React.FC<SettingsComponentProps> = (props) => {
         window.matchMedia &&
         window.matchMedia("(prefers-color-scheme: dark)").matches
     ) {
-        // dark mode
+    // dark mode
     }
     // To watch for changes:
 
@@ -40,7 +40,7 @@ export const SettingsComponent: React.FC<SettingsComponentProps> = (props) => {
     );
     const onValueChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const target = e.currentTarget;
-        const {name, value} = target;
+        const { name, value } = target;
         switch (name) {
         case "username":
             dispatch(updateUsername(value));

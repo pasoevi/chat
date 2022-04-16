@@ -10,7 +10,7 @@ import {
     UPDATE_TIME_FORMAT,
     UPDATE_USERNAME,
 } from "./types";
-import {CLIENT_USERNAME_UPDATE, emit} from "../../engine/websockets";
+import { CLIENT_USERNAME_UPDATE, emit } from "../../engine/websockets";
 
 export function updateSession(newSession: SystemState) {
     return {

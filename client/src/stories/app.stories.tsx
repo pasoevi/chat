@@ -1,11 +1,11 @@
 import React from "react";
 //@ts-ignore
-import {WithFigma} from "storybook-addon-figma";
+import { WithFigma } from "storybook-addon-figma";
 import App from "../App";
 
-import {Provider} from "react-redux";
-import {rootReducer as reducer} from "../store";
-import {createStore} from "redux";
+import { Provider } from "react-redux";
+import { rootReducer as reducer } from "../store";
+import { createStore } from "redux";
 
 const initialRootState = {};
 

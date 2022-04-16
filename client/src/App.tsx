@@ -1,8 +1,8 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import styles from "./App.module.scss";
-import {ChatComponent} from "./components/Chat/ChatComponent";
-import {SettingsComponent} from "./components/Settings/SettingsComponent";
-import {Menu} from "./components/Menu/Menu";
+import { ChatComponent } from "./components/Chat/ChatComponent";
+import { SettingsComponent } from "./components/Settings/SettingsComponent";
+import { Menu } from "./components/Menu/Menu";
 
 export default function App() {
     const [isMenuVisible, setMenuVisible] = useState(false);
@@ -13,7 +13,7 @@ export default function App() {
     };
 
     const SettingsOverlay = (
-        <div className={styles["settingsOverlay"]}>
+        <div className={styles.settingsOverlay}>
             <SettingsComponent onClose={handleSettingsToggle}/>
         </div>
     );

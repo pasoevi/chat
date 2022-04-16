@@ -1,6 +1,6 @@
 export interface User {
-    id: string;
-    displayName: string;
+  id: string;
+  displayName: string;
 }
 
 export type Theme = "Light" | "Dark";
@@ -9,13 +9,13 @@ export type Language = "EN" | "RU" | "DE";
 
 // Describing the shape of the system's slice of state
 export interface SystemState {
-    loggedIn: boolean;
-    session: string;
-    theme: Theme;
-    language: Language;
-    timeFormat: TimeFormat;
-    sendOnCtrlEnter: boolean;
-    currentUser: User;
+  loggedIn: boolean;
+  session: string;
+  theme: Theme;
+  language: Language;
+  timeFormat: TimeFormat;
+  sendOnCtrlEnter: boolean;
+  currentUser: User;
 }
 
 // Describing the different ACTION NAMES available
@@ -27,33 +27,33 @@ export const UPDATE_CTRL_SENDS = "UPDATE_CTRL_SENDS";
 export const UPDATE_LANGUAGE = "UPDATE_LANGUAGE";
 
 interface UpdateSessionAction {
-    type: typeof UPDATE_SESSION;
-    payload: SystemState;
+  type: typeof UPDATE_SESSION;
+  payload: SystemState;
 }
 
 interface UpdateUsernameAction {
-    type: typeof UPDATE_USERNAME;
-    payload: string;
+  type: typeof UPDATE_USERNAME;
+  payload: string;
 }
 
 interface UpdateThemeAction {
-    type: typeof UPDATE_THEME;
-    payload: Theme;
+  type: typeof UPDATE_THEME;
+  payload: Theme;
 }
 
 interface UpdateTimeFormatAction {
-    type: typeof UPDATE_TIME_FORMAT;
-    payload: TimeFormat;
+  type: typeof UPDATE_TIME_FORMAT;
+  payload: TimeFormat;
 }
 
 interface UpdateCTRLSendsAction {
-    type: typeof UPDATE_CTRL_SENDS;
-    payload: boolean;
+  type: typeof UPDATE_CTRL_SENDS;
+  payload: boolean;
 }
 
 interface UpdateLanguageAction {
-    type: typeof UPDATE_LANGUAGE;
-    payload: Language;
+  type: typeof UPDATE_LANGUAGE;
+  payload: Language;
 }
 
 export type SystemActionTypes =
