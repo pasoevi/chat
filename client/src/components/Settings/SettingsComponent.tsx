@@ -1,14 +1,8 @@
 import React from "react";
 import * as styles from "./SettingsComponent.module.scss";
-import { useSelector, useDispatch } from "react-redux";
-import { AppState } from "../../store";
-import {
-    updateUsername,
-    updateTimeformat,
-    updateTheme,
-    updateCTRLSends,
-} from "../../store/system/actions";
-import { TimeFormat, Theme } from "../../store/system/types";
+import {useDispatch, useSelector} from "react-redux";
+import {AppState} from "../../store";
+import {updateCTRLSends, updateTheme, updateTimeformat, updateUsername,} from "../../store/system/actions";
 
 export interface SettingsComponentProps {
     onClose: () => void;
@@ -46,24 +40,22 @@ export const SettingsComponent: React.FC<SettingsComponentProps> = (props) => {
     );
     const onValueChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const target = e.currentTarget;
-        const { name, value } = target;
+        const {name, value} = target;
         switch (name) {
-            case "username":
-                dispatch(updateUsername(value));
-                break;
-            case "timeFormat":
-                const newTimeFormat: TimeFormat = value === "24" ? "24" : "12";
-                dispatch(updateTimeformat(newTimeFormat));
-                break;
-            case "theme":
-                const newTheme: Theme = value === "Dark" ? "Dark" : "Light";
-                dispatch(updateTheme(newTheme));
-                break;
-            case "sendOnCtrlEnter":
-                dispatch(updateCTRLSends(value === "true"));
-                break;
-            default:
-                break;
+        case "username":
+            dispatch(updateUsername(value));
+            break;
+        case "timeFormat":
+            dispatch(updateTimeformat(value === "24" ? "24" : "12"));
+            break;
+        case "theme":
+            dispatch(updateTheme(value === "Dark" ? "Dark" : "Light"));
+            break;
+        case "sendOnCtrlEnter":
+            dispatch(updateCTRLSends(value === "true"));
+            break;
+        default:
+            break;
         }
         console.log(`${name}: ${value}`);
     };

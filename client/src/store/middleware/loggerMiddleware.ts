@@ -1,9 +1,5 @@
-import {
-    Action,
-    MiddlewareAPI,
-    Dispatch,
-} from "@reduxjs/toolkit";
-import { temporaryAny } from "../../types";
+import {Action, Dispatch, MiddlewareAPI,} from "@reduxjs/toolkit";
+import {temporaryAny} from "../../types";
 
 export const loggerMiddleware: temporaryAny = (
     api: MiddlewareAPI<temporaryAny>,

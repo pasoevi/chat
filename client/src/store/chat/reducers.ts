@@ -1,17 +1,10 @@
-import {
-    ChatState,
-    SEND_MESSAGE,
-    DELETE_MESSAGE,
-    ChatActionTypes,
-    Message,
-    RECEIVE_MESSAGE,
-} from "./types";
-import { v4 } from "node-uuid";
+import {ChatActionTypes, ChatState, DELETE_MESSAGE, Message, RECEIVE_MESSAGE, SEND_MESSAGE,} from "./types";
+import {v4} from "node-uuid";
 
 const mockMessages: Message[] = [
     {
         id: "1",
-        sender: { id: v4(), displayName: "Sergo Pasoevi" },
+        sender: {id: v4(), displayName: "Sergo Pasoevi"},
         timestamp: Date.now(),
         text: "Do you want to bang tonight?",
     }

@@ -1,4 +1,4 @@
-import { User } from "../system/types";
+import {User} from "../system/types";
 
 export interface Message {
     id: string;
@@ -8,7 +8,7 @@ export interface Message {
 }
 
 export interface ChatState {
-  messages: Message[];
+    messages: Message[];
 }
 
 // Describing the different ACTION NAMES available
@@ -17,20 +17,20 @@ export const RECEIVE_MESSAGE = "RECEIVE_MESSAGE";
 export const DELETE_MESSAGE = "DELETE_MESSAGE";
 
 interface SendMessageAction {
-  type: typeof SEND_MESSAGE;
-  payload: Message;
+    type: typeof SEND_MESSAGE;
+    payload: Message;
 }
 
 interface ReceiveMessageAction {
-  type: typeof RECEIVE_MESSAGE;
-  payload: Message;
+    type: typeof RECEIVE_MESSAGE;
+    payload: Message;
 }
 
 interface DeleteMessageAction {
-  type: typeof DELETE_MESSAGE;
-  meta: {
-    timestamp: number;
-  };
+    type: typeof DELETE_MESSAGE;
+    meta: {
+        timestamp: number;
+    };
 }
 
 export type ChatActionTypes = SendMessageAction | ReceiveMessageAction | DeleteMessageAction;

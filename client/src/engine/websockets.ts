@@ -1,7 +1,7 @@
 import io from "socket.io-client";
-import { temporaryAny } from "../types";
-import { Message } from "../store/chat/types";
-import { messageReceived } from "../store/chat/actions";
+import {temporaryAny} from "../types";
+import {Message} from "../store/chat/types";
+import {messageReceived} from "../store/chat/actions";
 
 const SERVER_MESSAGE_BROADCAST = "SERVER_MESSAGE_BROADCAST";
 export const CLIENT_MESSAGE_SEND = "CLIENT_MESSAGE_SEND";

@@ -4,6 +4,7 @@ import gearIcon from "../../assets/gear.svg";
 
 export interface MenuProps {
     unreadCount?: number;
+    // eslint-disable-next-line no-unused-vars
     toggleSettings: (event: React.MouseEvent<HTMLElement>) => void;
 }
 
@@ -14,7 +15,7 @@ export const Menu: React.FC<MenuProps> = (props) => {
                 className={styles.toggleSettings}
                 onClick={props.toggleSettings}
             >
-                <img src={gearIcon} alt="Open Settings" />
+                <img src={gearIcon} alt="Open Settings"/>
             </button>
             {/* <div className={styles.srOnly}></div> */}
         </nav>

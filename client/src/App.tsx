@@ -1,9 +1,8 @@
-import React from "react";
+import React, {useState} from "react";
 import * as styles from "./App.module.scss";
-import { ChatComponent } from "./components/Chat/ChatComponent";
-import { SettingsComponent } from "./components/Settings/SettingsComponent";
-import { Menu } from "./components/Menu/Menu";
-import { useState } from "react";
+import {ChatComponent} from "./components/Chat/ChatComponent";
+import {SettingsComponent} from "./components/Settings/SettingsComponent";
+import {Menu} from "./components/Menu/Menu";
 
 export default function App() {
     const [isMenuVisible, setMenuVisible] = useState(false);
@@ -15,7 +14,7 @@ export default function App() {
 
     const SettingsOverlay = (
         <div className={styles["settingsOverlay"]}>
-            <SettingsComponent onClose={handleSettingsToggle} />
+            <SettingsComponent onClose={handleSettingsToggle}/>
         </div>
     );
 
@@ -23,10 +22,10 @@ export default function App() {
         <div className={styles.app}>
             <div className={styles.container}>
                 <div className={styles.menu}>
-                    <Menu toggleSettings={handleSettingsToggle} />
+                    <Menu toggleSettings={handleSettingsToggle}/>
                 </div>
                 {/* <div className={styles.chat}> */}
-                <ChatComponent />
+                <ChatComponent/>
                 {/* </div> */}
 
                 {isMenuVisible && SettingsOverlay}

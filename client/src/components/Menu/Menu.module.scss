@@ -1,17 +1,18 @@
 @import "../../index.scss";
 
 .menu {
-    display: flex;
-    justify-content: flex-end;
-		align-items: center;
-		height: 100%
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%
 }
 
 .toggleSettings {
-    border: none;
-    background: none;
-    padding: 0.3em 0.8em;
-		img {
-			width: 25px;
-		}
+  border: none;
+  background: none;
+  padding: 0.3em 0.8em;
+
+  img {
+    width: 25px;
+  }
 }

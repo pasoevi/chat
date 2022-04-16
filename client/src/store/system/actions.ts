@@ -1,16 +1,16 @@
 import {
+    Language,
     SystemState,
-    UPDATE_SESSION,
-    UPDATE_USERNAME,
-    UPDATE_THEME,
     Theme,
     TimeFormat,
-    UPDATE_TIME_FORMAT,
     UPDATE_CTRL_SENDS,
-    Language,
     UPDATE_LANGUAGE,
+    UPDATE_SESSION,
+    UPDATE_THEME,
+    UPDATE_TIME_FORMAT,
+    UPDATE_USERNAME,
 } from "./types";
-import { CLIENT_USERNAME_UPDATE, emit } from "../../engine/websockets";
+import {CLIENT_USERNAME_UPDATE, emit} from "../../engine/websockets";
 
 export function updateSession(newSession: SystemState) {
     return {

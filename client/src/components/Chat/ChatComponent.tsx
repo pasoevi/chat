@@ -1,18 +1,19 @@
-import React, { useEffect, useRef } from "react";
-import { useSelector } from "react-redux";
-import { MessageComponent } from "../Message/Message";
-import { AppState } from "../../store";
+import React, {useEffect, useRef} from "react";
+import {useSelector} from "react-redux";
+import {MessageComponent} from "../Message/Message";
+import {AppState} from "../../store";
 import * as styles from "./Chat.module.scss";
-import { SendMessage } from "../SendMessage/SendMessage";
+import {SendMessage} from "../SendMessage/SendMessage";
 
-export interface ChatProps {}
+export interface ChatProps {
+}
 
-export const ChatComponent: React.FC<ChatProps> = (props) => {
+export const ChatComponent: React.FC<ChatProps> = () => {
     const lastMessageRef = useRef<HTMLDivElement>(null);
 
     const scrollToBottom = () => {
         if (lastMessageRef !== null && lastMessageRef.current !== null) {
-            lastMessageRef.current.scrollIntoView({ behavior: "smooth" });
+            lastMessageRef.current.scrollIntoView({behavior: "smooth"});
         }
     };
     useEffect(() => {
@@ -34,7 +35,7 @@ export const ChatComponent: React.FC<ChatProps> = (props) => {
             ))}
             <div className={styles.hidden}></div>
             <div className={styles.bottom}>
-                <SendMessage />
+                <SendMessage/>
             </div>
         </div>
     );

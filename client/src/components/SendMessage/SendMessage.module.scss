@@ -1,30 +1,33 @@
 @import "../../index.scss";
 
 .sendMessage {
-    display: flex;
-    justify-content: space-between;
-    height: 100%;
-    background-color: white;
-    padding: 1em;
-    border-top: 1px solid $grey-light;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  background-color: white;
+  padding: 1em;
+  border-top: 1px solid $grey-light;
 
-    label {
-        width: 100%;
-    }
-    input {
-        width: 100%;
-        text-align: justify;
-        line-height: 3.3em;
-        background-color: $grey-lightest;
-        border: none;
-    }
-		button {
-			border: none;
-			background: $grey-lightest;
-			height: 3.3em;
-			padding: 10px 15px 10px 0;
-		}
-		button img {
-			width: 25px;
-		}
+  label {
+    width: 100%;
+  }
+
+  input {
+    width: 100%;
+    text-align: justify;
+    line-height: 3.3em;
+    background-color: $grey-lightest;
+    border: none;
+  }
+
+  button {
+    border: none;
+    background: $grey-lightest;
+    height: 3.3em;
+    padding: 10px 15px 10px 0;
+  }
+
+  button img {
+    width: 25px;
+  }
 }

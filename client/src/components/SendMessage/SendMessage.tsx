@@ -1,8 +1,8 @@
-import React, { useState, ChangeEvent, FormEvent } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React, {ChangeEvent, FormEvent, useState} from "react";
+import {useDispatch, useSelector} from "react-redux";
 import styles from "./SendMessage.module.scss";
-import { sendMessage } from "../../store/chat/actions";
-import { AppState } from "../../store";
+import {sendMessage} from "../../store/chat/actions";
+import {AppState} from "../../store";
 import planeIcon from "../../assets/plane.svg";
 
 interface SendMessageProps {
@@ -15,7 +15,7 @@ const defaultProps: SendMessageProps = {
 
 export const SendMessage: React.FC<SendMessageProps> = (props) => {
     const dispatch = useDispatch();
-    const { message } = props;
+    const {message} = props;
     const user = useSelector((state: AppState) => state.system.currentUser);
     const [messageText, setMessageText] = useState(message ?? "");
 
@@ -41,7 +41,7 @@ export const SendMessage: React.FC<SendMessageProps> = (props) => {
                 />
             </label>
             <button type="submit" value="Send">
-                <img src={planeIcon} alt="Send" />
+                <img src={planeIcon} alt="Send"/>
             </button>
         </form>
     );

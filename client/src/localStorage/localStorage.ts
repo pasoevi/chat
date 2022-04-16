@@ -1,4 +1,4 @@
-import { AppState } from "../store";
+import {AppState} from "../store";
 
 export function loadState() {
     try {
@@ -17,6 +17,6 @@ export function saveState(state: AppState) {
         const serializedState = JSON.stringify(state);
         localStorage.setItem("state", serializedState);
     } catch {
-
+        console.warn("Cannot save to local storage");
     }
 }
