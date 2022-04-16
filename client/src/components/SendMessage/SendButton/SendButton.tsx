@@ -5,4 +5,7 @@ export interface SendButtonProps {
   onClick: () => void;
 }
 
-export const SendButton: React.FC<SendButtonProps> = React.memo((props) => <button className={styles.sendButton} onClick={props.onClick} />);
+export const SendButton: React.FC<SendButtonProps> = ({ onClick }) => (
+  // eslint-disable-next-line jsx-a11y/control-has-associated-label
+  <button type="submit" className={styles.sendButton} onClick={onClick} />
+);

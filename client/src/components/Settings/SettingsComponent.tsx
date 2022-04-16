@@ -10,7 +10,7 @@ export interface SettingsComponentProps {
   onClose: () => void;
 }
 
-export const SettingsComponent: React.FC<SettingsComponentProps> = (props) => {
+export const SettingsComponent: React.FC<SettingsComponentProps> = ({ onClose }) => {
   const dispatch = useDispatch();
   const username = useSelector(
     (state: AppState) => state.system.currentUser.displayName,
@@ -29,6 +29,7 @@ export const SettingsComponent: React.FC<SettingsComponentProps> = (props) => {
     .matchMedia('(prefers-color-scheme: dark)')
     .addEventListener('change', (e) => {
       const newColorScheme = e.matches ? 'dark' : 'light';
+      // eslint-disable-next-line no-console
       console.log(
         `You can set new color scheme here, it's ${newColorScheme}`,
       );
@@ -59,16 +60,15 @@ export const SettingsComponent: React.FC<SettingsComponentProps> = (props) => {
       default:
         break;
     }
-    console.log(`${name}: ${value}`);
   };
   return (
     <div className={styles.settings}>
       <div className={styles.header}>
         <h2>Settings</h2>
-        <button onClick={props.onClose}>×</button>
+        <button type="button" onClick={onClose}>×</button>
       </div>
       <div>
-        <label>
+        <label htmlFor="username">
           <span>User name</span>
           <input
             value={username}
@@ -81,7 +81,7 @@ export const SettingsComponent: React.FC<SettingsComponentProps> = (props) => {
       <div className={styles.settingspart}>
         <span className={styles.title}>Theme</span>
         <div>
-          <label>
+          <label htmlFor="theme">
             <input
               type="radio"
               value="Light"
@@ -93,7 +93,7 @@ export const SettingsComponent: React.FC<SettingsComponentProps> = (props) => {
           </label>
         </div>
         <div>
-          <label>
+          <label htmlFor="theme">
             <input
               type="radio"
               value="Dark"
@@ -108,7 +108,7 @@ export const SettingsComponent: React.FC<SettingsComponentProps> = (props) => {
       <div className={styles.settingspart}>
         <span className={styles.title}>Time format</span>
         <div>
-          <label>
+          <label htmlFor="timeFormat">
             <input
               type="radio"
               value="12"
@@ -120,7 +120,7 @@ export const SettingsComponent: React.FC<SettingsComponentProps> = (props) => {
           </label>
         </div>
         <div>
-          <label>
+          <label htmlFor="timeFormat">
             <input
               type="radio"
               value="24"
@@ -137,7 +137,7 @@ export const SettingsComponent: React.FC<SettingsComponentProps> = (props) => {
           Send messages on CTRL+ENTER
         </span>
         <div>
-          <label>
+          <label htmlFor="sendOnCtrlEnter">
             <input
               type="radio"
               value="true"
@@ -149,7 +149,7 @@ export const SettingsComponent: React.FC<SettingsComponentProps> = (props) => {
           </label>
         </div>
         <div>
-          <label>
+          <label htmlFor="sendOnCtrlEnter">
             <input
               type="radio"
               value="false"

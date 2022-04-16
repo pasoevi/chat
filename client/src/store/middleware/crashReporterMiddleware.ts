@@ -1,7 +1,8 @@
-export const crashReporter = (store: any) => (next: any) => (action: any) => {
+export const crashReporter = (/* store: any */) => (next: any) => (action: any) => {
   try {
     return next(action);
   } catch (err) {
+    // eslint-disable-next-line no-console
     console.error('Caught an exception!', err);
     /* Raven.captureException(err, {
             extra: {
@@ -11,4 +12,5 @@ export const crashReporter = (store: any) => (next: any) => (action: any) => {
         });
         throw err; */
   }
+  return undefined;
 };

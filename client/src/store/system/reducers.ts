@@ -24,6 +24,7 @@ const initialState: SystemState = {
 };
 
 export function systemReducer(
+  // eslint-disable-next-line @typescript-eslint/default-param-last
   state = initialState,
   action: SystemActionTypes,
 ): SystemState {

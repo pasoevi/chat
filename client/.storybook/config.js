@@ -9,7 +9,7 @@ setOptions({
 });
 
 const loaderFn = () => {
-    const allExports = [require("../src/stories/0-Welcome.stories.js")];
+    const allExports = [];
     const req = require.context("../src/components", true, /\.stories\.js$/);
     req.keys().forEach((fname) => allExports.push(req(fname)));
     return allExports;

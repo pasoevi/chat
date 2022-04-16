@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Users\spaso\scoop\apps\nvm\current\nodejs\nodejs\node.exe C:\Users\spaso\scoop\apps\nvm\current\nodejs\nodejs\node_modules\yarn\bin\yarn.js add -D @typescript-eslint/import
+  C:\Users\spaso\scoop\apps\nvm\current\nodejs\nodejs\node.exe C:\Users\spaso\scoop\apps\nvm\current\nodejs\nodejs\node_modules\yarn\bin\yarn.js add -D @types/storybook-addon-figma
 
 PATH: 
   C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\dotnet\;C:\Users\spaso\scoop\apps\coursier\current\bin;C:\Users\spaso\scoop\apps\openjdk\current\bin;C:\Users\spaso\scoop\apps\vscode\current\bin;C:\Users\spaso\scoop\apps\nvm\current\nodejs\nodejs;C:\Users\spaso\scoop\apps\IDEA-Ultimate\current\bin;C:\Users\spaso\.cargo\bin;C:\Users\spaso\scoop\apps\python\current\scripts;C:\Apps\cocos2d-x-4.0\templates;C:\Apps\cocos2d-x-4.0\tools\cocos2d-console\bin;C:\Users\spaso\scoop\apps\python27\current\scripts;C:\Users\spaso\scoop\apps\dotnet-sdk\current;C:\Users\spaso\scoop\apps\yarn\current\bin;C:\Users\spaso\scoop\apps\yarn\current\Yarn\bin;C:\Users\spaso\scoop\apps\gcc\current\bin;C:\Users\spaso\AppData\Local\Programs\Python\Launcher\;C:\Users\spaso\scoop\shims;C:\Users\spaso\AppData\Local\Microsoft\WindowsApps;C:\Users\spaso\ffmpeg\bin;C:\Users\spaso\AppData\Local\Coursier\data\bin;c:\users\spaso\scoop\apps\python\3.7.1\Scripts;C:\Users\spaso\.dotnet\tools;C:\Users\spaso\AppData\Local\Microsoft\WindowsApps
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@typescript-eslint%2fimport: Not found
+  Error: https://registry.yarnpkg.com/@types%2fstorybook-addon-figma: Not found
       at Request.params.callback [as _callback] (C:\Users\spaso\scoop\persist\nvm\nodejs\v16.13.0\node_modules\yarn\lib\cli.js:66138:18)
       at Request.self.callback (C:\Users\spaso\scoop\persist\nvm\nodejs\v16.13.0\node_modules\yarn\lib\cli.js:140883:22)
       at Request.emit (node:events:390:28)
@@ -69,6 +69,7 @@ npm manifest:
       "react-redux": "^7.2.8",
       "react-router-dom": "^6.3.0",
       "react-scripts": "5.0.1",
+      "redux": "^4.1.2",
       "redux-devtools-extension": "^2.13.8",
       "redux-thunk": "^2.4.1",
       "reselect": "^4.1.5",
@@ -123,6 +124,7 @@ npm manifest:
       "@typescript-eslint/eslint-plugin": "^5.19.0",
       "@typescript-eslint/parser": "^5.19.0",
       "babel-eslint": "^10.1.0",
+      "eslint-config-airbnb": "^19.0.4",
       "eslint-config-airbnb-typescript": "^17.0.0",
       "eslint-plugin-react": "^7.29.4",
       "eslint-plugin-react-hooks": "^4.4.0",
@@ -7138,6 +7140,15 @@ Lockfile:
     integrity sha512-elNiuzD0kPAPTXjFWg+lE24nMdHMtuxgYoD30OyMD6yrW1AhFZPAg27VX7d3tzOErw+dgJTNWfRSDqEcXb4V0g==
     dependencies:
       eslint-config-airbnb-base "^15.0.0"
+  
+  eslint-config-airbnb@^19.0.4:
+    version "19.0.4"
+    resolved "https://registry.yarnpkg.com/eslint-config-airbnb/-/eslint-config-airbnb-19.0.4.tgz#84d4c3490ad70a0ffa571138ebcdea6ab085fdc3"
+    integrity sha512-T75QYQVQX57jiNgpF9r1KegMICE94VYwoFQyMGhrvc+lB8YF2E/M/PYDaQe1AJcWaEgqLE+ErXV1Og/+6Vyzew==
+    dependencies:
+      eslint-config-airbnb-base "^15.0.0"
+      object.assign "^4.1.2"
+      object.entries "^1.1.5"
   
   eslint-config-react-app@^7.0.1:
     version "7.0.1"

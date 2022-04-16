@@ -1,5 +1,5 @@
 import {
-  Action, combineReducers, configureStore, getDefaultMiddleware, ThunkAction,
+  Action, combineReducers, configureStore, ThunkAction,
 } from '@reduxjs/toolkit';
 import thunkMiddleware from 'redux-thunk';
 import { loggerMiddleware } from './middleware/loggerMiddleware';
@@ -7,6 +7,7 @@ import { loggerMiddleware } from './middleware/loggerMiddleware';
 import { systemReducer } from './system/reducers';
 import { chatReducer } from './chat/reducers';
 import { loadState, saveState } from '../localStorage/localStorage';
+import { serverMiddleware } from './middleware/serverMiddleware';
 
 export const rootReducer = combineReducers({
   system: systemReducer,
@@ -24,7 +25,12 @@ const persistedState = loadState();
 
 export const store = configureStore({
   reducer: rootReducer,
-  middleware: [loggerMiddleware, thunkMiddleware, ...getDefaultMiddleware()],
+  middleware: (getDefaultMiddleware) => [
+    ...getDefaultMiddleware(),
+    serverMiddleware,
+    loggerMiddleware,
+    thunkMiddleware,
+  ],
   devTools: process.env.NODE_ENV !== 'production',
   preloadedState: persistedState,
 });

@@ -2,7 +2,6 @@ import { v4 } from 'uuid';
 import {
   DELETE_MESSAGE, Message, RECEIVE_MESSAGE, SEND_MESSAGE,
 } from './types';
-import { CLIENT_MESSAGE_SEND, emit } from '../../engine/websockets';
 import { User } from '../system/types';
 
 export function sendMessage(text: string, sender: User) {
@@ -12,7 +11,7 @@ export function sendMessage(text: string, sender: User) {
     timestamp: Date.now(),
     sender,
   };
-  emit(CLIENT_MESSAGE_SEND, newMessage);
+
   return {
     type: SEND_MESSAGE,
     payload: newMessage,

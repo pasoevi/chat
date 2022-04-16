@@ -4,12 +4,11 @@ import { ChatComponent } from './components/Chat/ChatComponent';
 import { SettingsComponent } from './components/Settings/SettingsComponent';
 import { Menu } from './components/Menu/Menu';
 
-export default function App() {
+export const App: React.FC = () => {
   const [isMenuVisible, setMenuVisible] = useState(false);
 
   const handleSettingsToggle = () => {
     setMenuVisible(!isMenuVisible);
-    console.log(isMenuVisible);
   };
 
   const SettingsOverlay = (
@@ -24,12 +23,9 @@ export default function App() {
         <div className={styles.menu}>
           <Menu toggleSettings={handleSettingsToggle} />
         </div>
-        {/* <div className={styles.chat}> */}
         <ChatComponent />
-        {/* </div> */}
-
         {isMenuVisible && SettingsOverlay}
       </div>
     </div>
   );
-}
+};

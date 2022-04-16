@@ -1,5 +1,3 @@
-import { AppState } from '../store';
-
 export function loadState() {
   try {
     const serializedState = localStorage.getItem('state');
@@ -12,11 +10,12 @@ export function loadState() {
   }
 }
 
-export function saveState(state: AppState) {
+export function saveState(state: temporaryAny) {
   try {
     const serializedState = JSON.stringify(state);
     localStorage.setItem('state', serializedState);
   } catch {
+    // eslint-disable-next-line no-console
     console.warn('Cannot save to local storage');
   }
 }

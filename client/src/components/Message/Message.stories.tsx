@@ -20,10 +20,13 @@ const msgData = {
   timestamp: Date.now(),
 };
 
-export function Message() {
-  return (
-    <Provider store={store}>
-      <MessageComponent {...msgData} text={knobText('Text', 'Hey there!')} />
-    </Provider>
-  );
-}
+export const Message: React.FC = () => (
+  <Provider store={store}>
+    <MessageComponent
+      id={msgData.id}
+      sender={msgData.sender}
+      text={knobText('Text', 'Hey there!')}
+      timestamp={msgData.timestamp}
+    />
+  </Provider>
+);

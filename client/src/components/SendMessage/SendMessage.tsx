@@ -33,8 +33,9 @@ export const SendMessage: React.FC<SendMessageProps> = (props) => {
 
   return (
     <form className={styles.sendMessage} onSubmit={handleSendMessage}>
-      <label>
+      <label htmlFor="message">
         <input
+          name="message"
           type="textarea"
           onChange={handleTextInputChange}
           value={messageText}

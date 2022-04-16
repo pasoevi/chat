@@ -17,9 +17,8 @@ function render(
   } = {},
 ) {
   // @ts-ignore
-  function Wrapper({ children }) {
-    return <Provider store={store}>{children}</Provider>;
-  }
+  // eslint-disable-next-line react/prop-types
+  const Wrapper = ({ children }) => <Provider store={store}>{children}</Provider>;
 
   // @ts-ignore
   return rtlRender(element, { wrapper: Wrapper, ...renderOptions });

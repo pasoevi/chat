@@ -8,11 +8,13 @@ export interface MenuProps {
   toggleSettings: (event: React.MouseEvent<HTMLElement>) => void;
 }
 
-export const Menu: React.FC<MenuProps> = (props) => (
+export const Menu: React.FC<MenuProps> = ({ toggleSettings, unreadCount = 0 }) => (
   <nav className={styles.menu}>
+    {`${unreadCount}`}
     <button
+      type="button"
       className={styles.toggleSettings}
-      onClick={props.toggleSettings}
+      onClick={toggleSettings}
     >
       <img src={gearIcon} alt="Open Settings" />
     </button>

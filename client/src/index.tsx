@@ -2,7 +2,7 @@ import React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import * as Sentry from '@sentry/browser';
 import { Provider } from 'react-redux';
-import App from './App';
+import { App } from './App';
 import * as serviceWorker from './serviceWorker';
 import { store } from './store';
 import { init as initWS } from './engine/websockets';
@@ -14,8 +14,7 @@ const rootElement = document.getElementById('root') as HTMLDivElement;
 
 if (process.env.NODE_ENV === 'production') {
   Sentry.init({
-    dsn:
-            'https://d964005f348340158006751922530bf6@o406571.ingest.sentry.io/5274291',
+    dsn: 'https://d964005f348340158006751922530bf6@o406571.ingest.sentry.io/5274291',
   });
 }
 
