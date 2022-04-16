@@ -1,5 +1,5 @@
 import React from "react";
-import * as styles from "./SendButton.module.scss";
+import styles from "./SendButton.module.scss";
 
 export interface SendButtonProps {
     onClick: () => void;

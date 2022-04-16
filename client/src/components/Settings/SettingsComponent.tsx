@@ -1,5 +1,5 @@
 import React from "react";
-import * as styles from "./SettingsComponent.module.scss";
+import styles from "./SettingsComponent.module.scss";
 import {useDispatch, useSelector} from "react-redux";
 import {AppState} from "../../store";
 import {updateCTRLSends, updateTheme, updateTimeformat, updateUsername,} from "../../store/system/actions";

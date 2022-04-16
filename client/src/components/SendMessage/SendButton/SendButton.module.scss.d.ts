@@ -1,1 +1,9 @@
-export const sendButton: string;
+export type Styles = {
+  sendButton: string;
+};
+
+export type ClassNames = keyof Styles;
+
+declare const styles: Styles;
+
+export default styles;

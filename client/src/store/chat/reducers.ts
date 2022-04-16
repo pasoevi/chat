@@ -1,5 +1,5 @@
 import {ChatActionTypes, ChatState, DELETE_MESSAGE, Message, RECEIVE_MESSAGE, SEND_MESSAGE,} from "./types";
-import {v4} from "node-uuid";
+import {v4} from "uuid";
 
 const mockMessages: Message[] = [
     {

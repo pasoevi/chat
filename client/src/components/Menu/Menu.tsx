@@ -1,5 +1,5 @@
 import React from "react";
-import * as styles from "./Menu.module.scss";
+import styles from "./Menu.module.scss";
 import gearIcon from "../../assets/gear.svg";
 
 export interface MenuProps {

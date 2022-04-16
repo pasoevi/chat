@@ -1,5 +1,13 @@
-export const bottom: string;
-export const chat: string;
-export const hidden: string;
-export const srOnly: string;
-export const truncate: string;
+export type Styles = {
+  bottom: string;
+  chat: string;
+  hidden: string;
+  srOnly: string;
+  truncate: string;
+};
+
+export type ClassNames = keyof Styles;
+
+declare const styles: Styles;
+
+export default styles;

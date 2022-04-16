@@ -1,8 +1,16 @@
-export const author: string;
-export const message: string;
-export const messageInfo: string;
-export const sent: string;
-export const sentDate: string;
-export const srOnly: string;
-export const text: string;
-export const truncate: string;
+export type Styles = {
+  author: string;
+  message: string;
+  messageInfo: string;
+  sent: string;
+  sentDate: string;
+  srOnly: string;
+  text: string;
+  truncate: string;
+};
+
+export type ClassNames = keyof Styles;
+
+declare const styles: Styles;
+
+export default styles;

@@ -1,4 +1,4 @@
-import {v4} from "node-uuid";
+import {v4} from "uuid";
 import {DELETE_MESSAGE, Message, RECEIVE_MESSAGE, SEND_MESSAGE} from "./types";
 import {CLIENT_MESSAGE_SEND, emit} from "../../engine/websockets";
 import {User} from "../system/types";

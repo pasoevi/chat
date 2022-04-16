@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import * as styles from "./App.module.scss";
+import styles from "./App.module.scss";
 import {ChatComponent} from "./components/Chat/ChatComponent";
 import {SettingsComponent} from "./components/Settings/SettingsComponent";
 import {Menu} from "./components/Menu/Menu";

@@ -1,4 +1,12 @@
-export const menu: string;
-export const srOnly: string;
-export const toggleSettings: string;
-export const truncate: string;
+export type Styles = {
+  menu: string;
+  srOnly: string;
+  toggleSettings: string;
+  truncate: string;
+};
+
+export type ClassNames = keyof Styles;
+
+declare const styles: Styles;
+
+export default styles;

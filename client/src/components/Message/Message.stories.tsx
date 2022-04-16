@@ -1,7 +1,7 @@
 import React from "react";
 import {MessageComponent} from "./Message";
 import {text as knobText, withKnobs} from "@storybook/addon-knobs";
-import {v4} from "node-uuid";
+import {v4} from "uuid";
 import {Provider} from "react-redux";
 import {rootReducer as reducer} from "../../store";
 import {createStore} from "@reduxjs/toolkit";

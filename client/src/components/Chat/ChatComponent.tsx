@@ -2,7 +2,7 @@ import React, {useEffect, useRef} from "react";
 import {useSelector} from "react-redux";
 import {MessageComponent} from "../Message/Message";
 import {AppState} from "../../store";
-import * as styles from "./Chat.module.scss";
+import styles from "./Chat.module.scss";
 import {SendMessage} from "../SendMessage/SendMessage";
 
 export interface ChatProps {

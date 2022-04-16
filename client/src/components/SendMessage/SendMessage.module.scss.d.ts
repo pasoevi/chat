@@ -1,3 +1,11 @@
-export const sendMessage: string;
-export const srOnly: string;
-export const truncate: string;
+export type Styles = {
+  sendMessage: string;
+  srOnly: string;
+  truncate: string;
+};
+
+export type ClassNames = keyof Styles;
+
+declare const styles: Styles;
+
+export default styles;
